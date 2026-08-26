@@ -1,0 +1,68 @@
+@model ClientePremium.Models.ClientePremiumViewModel
+
+@{
+    ViewData["Title"] = "Cadastro Realizado";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-success shadow-sm mt-4">
+
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">✅ Validação Aprovada com Sucesso!</h4>
+            </div>
+
+            <div class="card-body">
+
+                <p class="text-muted">
+                    Todos os Data Annotations foram validados no Model Binding.
+                </p>
+
+                <ul class="list-group list-group-flush mb-3">
+
+                    <li class="list-group-item">
+                        <strong>Nome Completo:</strong>
+                        @Model.NomeCompleto
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Data de Nascimento:</strong>
+                        @Model.DataNascimento.ToString("dd/MM/yyyy")
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>CPF:</strong>
+                        @Model.Cpf
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Telefone Celular:</strong>
+                        @Model.TelefoneCelular
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>LinkedIn:</strong>
+                        @Model.UrlPerfilLinkedIn
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Renda Mensal:</strong>
+                        @Model.RendaMensal.ToString("C")
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Cartão de Crédito:</strong>
+                        @Model.NumeroCartaoCredito
+                    </li>
+
+                </ul>
+
+                <a asp-action="Cadastrar"
+                   class="btn btn-outline-success">
+                    Novo Cadastro
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
